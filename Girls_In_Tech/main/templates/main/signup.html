@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up 💕 | Girls In Tech</title>
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+
+{% include 'main/navbar.html' %}
+
+<section class="form-section">
+  <h2>Create Your Account 💻🌸</h2>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Choose a Username" required>
+    <input type="password" name="password" placeholder="Create Password" required>
+    <input type="password" name="confirm" placeholder="Confirm Password" required>
+    <button type="submit">Sign Up</button>
+  </form>
+
+  {% for message in messages %}
+    <p class="message">{{ message }}</p>
+  {% endfor %}
+</section>
+
+{% include 'main/footer.html' %}
+
+</body>
+</html>
+

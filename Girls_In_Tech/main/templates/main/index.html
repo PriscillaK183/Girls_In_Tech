@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Girls In Tech 💻🌸</title>
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+
+{% include 'main/navbar.html' %}
+
+<header>
+  <h1>Welcome to Girls In Tech 💻🌸</h1>
+  <p>Empowering young women to learn, create, and lead in tech.</p>
+</header>
+
+<main>
+  <section class="cards">
+    <div class="card">🌸 Learn</div>
+    <div class="card">💻 Build</div>
+    <div class="card">🚀 Grow</div>
+    <div class="card">🌷 Inspire</div>
+  </section>
+</main>
+
+{% include 'main/footer.html' %}
+
+</body>
+</html>
+
+
+
