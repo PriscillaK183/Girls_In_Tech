@@ -1,12 +1,25 @@
 /* =========================
    Global Styles
    ========================= */
-body {
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(180deg, #fff0f6, #ffe6f0);
   color: #333;
-  margin: 0;
-  padding: 0;
+}
+
+/* Wrapper for layout */
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content grows to fill space */
+.content {
+  flex: 1;
 }
 
 /* =========================
@@ -153,32 +166,16 @@ button:hover {
   color: white;
   text-align: center;
   padding: 1.5rem 0;
-  margin-top: 3rem;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-shadow: 0 -4px 15px rgba(255, 182, 193, 0.3);
   font-family: 'Poppins', sans-serif;
+  margin-top: auto;
 }
 
 .footer-content p {
   margin: 0.5rem 0;
   font-size: 0.95rem;
-}
-
-.footer-links {
-  margin-top: 0.7rem;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 0.8rem;
-  font-weight: 600;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-  color: #fff0f5;
 }
 
 /* =========================
@@ -199,4 +196,3 @@ button:hover {
   margin: 3rem auto;
   width: 70%;
 }
-
