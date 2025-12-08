@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Community 🌸 | Girls In Tech</title>
+  <title>Community  | Girls In Tech</title>
   <link rel="stylesheet" href="{% static 'main/style.css' %}">
 </head>
 <body>
@@ -11,13 +11,13 @@
 {% include 'main/navbar.html' %}
 
 <section class="community">
-  <h2>Community Wall 💻🌸</h2>
+  <h2>Community Wall </h2>
   <p>Share your thoughts, achievements, or ideas with other tech girls 💬</p>
 
   <form method="POST">
     {% csrf_token %}
     <textarea name="message" placeholder="Write something inspiring..." required></textarea>
-    <button type="submit">Post 💕</button>
+    <button type="submit">Post </button>
   </form>
 
   <div class="posts">
@@ -28,7 +28,7 @@
         <span class="time">{{ post.created_at|date:"M d, Y H:i" }}</span>
       </div>
     {% empty %}
-      <p class="no-posts">No posts yet. Be the first to share! 🌸</p>
+      <p class="no-posts">No posts yet. Be the first to share! </p>
     {% endfor %}
   </div>
 </section>

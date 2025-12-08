@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Girls In Tech</title>
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      {% include 'main/navbar.html' %}
+      {% block content %}{% endblock %}
+    </div>
+    {% include 'main/footer.html' %}
+  </div>
+</body>
+</html>
