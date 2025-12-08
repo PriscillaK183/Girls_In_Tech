@@ -1,17 +1,9 @@
+{% extends 'main/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Sign Up | Girls In Tech</title>
-  <link rel="stylesheet" href="{% static 'main/style.css' %}">
-</head>
-<body>
 
-{% include 'main/navbar.html' %}
-
+{% block content %}
 <section class="form-section">
-  <h2>Create Your Account </h2>
+  <h2>Create Your Account</h2>
   <form method="POST">
     {% csrf_token %}
     <input type="text" name="username" placeholder="Choose a Username" required>
@@ -24,9 +16,5 @@
     <p class="message">{{ message }}</p>
   {% endfor %}
 </section>
-
-{% include 'main/footer.html' %}
-
-</body>
-</html>
+{% endblock %}
 

@@ -3,29 +3,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Girls In Tech </title>
+  <title>Girls In Tech</title>
   <link rel="stylesheet" href="{% static 'main/style.css' %}">
+  <style>
+    /* =========================
+       Global Styles
+       ========================= */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #fff0f6, #ffe6f0);
+      color: #333;
+    }
+
+    /* Wrapper for layout */
+    .wrapper {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Main content grows to fill space */
+    .content {
+      flex: 1;
+    }
+
+    /* =========================
+       Navbar
+       ========================= */
+    .navbar {
+      background: #ffb6c1;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .navbar a:hover {
+      color: #fff0f6;
+      text-shadow: 0 0 8px white;
+    }
+
+    /* =========================
+       Heading
+       ========================= */
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 3rem;
+      color: #ff1493;
+    }
+
+    header p {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #555;
+    }
+
+    /* =========================
+       Cards (Home Page)
+       ========================= */
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      padding: 5rem 3rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      padding: 2.5rem;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      color: #ff69b4;
+      font-weight: 700;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+      color: white;
+    }
+
+    /* =========================
+       Footer
+       ========================= */
+    .footer {
+      background: linear-gradient(90deg, #ffc0cb, #ffb6c1, #ff69b4);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -4px 15px rgba(255, 182, 193, 0.3);
+      font-family: 'Poppins', sans-serif;
+      margin-top: auto;
+    }
+
+    .footer-content p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
 <body>
+  <div class="wrapper">
+    {% include 'main/navbar.html' %}
 
-{% include 'main/navbar.html' %}
+    <div class="content">
+      <header>
+        <h1>Welcome to Girls In Tech</h1>
+        <p>Empowering young women to learn, create, and lead in tech.</p>
+        <p class="intro">We believe every girl deserves the tools to build her future in tech — with confidence, creativity, and community.</p>
 
-<header>
-  <h1>Welcome to Girls In Tech </h1>
-  <p>Empowering young women to learn, create, and lead in tech.</p>
-</header>
+      </header>
 
-<main>
-  <section class="cards">
-    <div class="card"> Learn</div>
-    <div class="card"> Build</div>
-    <div class="card"> Grow</div>
-    <div class="card"> Inspire</div>
-  </section>
-</main>
+      <main>
+        <section class="cards">
+          <div class="card">Learn</div>
+          <div class="card">Build</div>
+          <div class="card">Grow</div>
+          <div class="card">Inspire</div>
+        </section>
+      </main>
+    </div>
 
-{% include 'main/footer.html' %}
-
+    <footer class="footer">
+      <div class="footer-content">
+        <p><strong>Girls In Tech</strong> — Empowering women to code, create, and inspire.</p>
+        <p>© 2025 Girls In Tech | Made with love using Django</p>
+        <p> Priscilla, Duduzile & Bongukuphila</p>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
 

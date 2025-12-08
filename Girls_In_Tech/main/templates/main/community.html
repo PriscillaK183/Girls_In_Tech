@@ -1,39 +1,28 @@
+{% extends 'main/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Community  | Girls In Tech</title>
-  <link rel="stylesheet" href="{% static 'main/style.css' %}">
-</head>
-<body>
 
-{% include 'main/navbar.html' %}
-
+{% block content %}
 <section class="community">
-  <h2>Community Wall </h2>
-  <p>Share your thoughts, achievements, or ideas with other tech girls 💬</p>
+  <h2>Community Wall</h2>
+  <p>Share your thoughts, achievements, or ideas with other tech girls </p>
 
   <form method="POST">
     {% csrf_token %}
     <textarea name="message" placeholder="Write something inspiring..." required></textarea>
-    <button type="submit">Post </button>
+    <button type="submit">Post</button>
   </form>
 
   <div class="posts">
     {% for post in posts %}
       <div class="post">
+        <div class="avatar">{{ post.user.username|slice:":1" }}</div>
         <strong>{{ post.user.username }}</strong>
         <p>{{ post.text }}</p>
         <span class="time">{{ post.created_at|date:"M d, Y H:i" }}</span>
       </div>
     {% empty %}
-      <p class="no-posts">No posts yet. Be the first to share! </p>
+      <p class="no-posts">No posts yet. Be the first to share!</p>
     {% endfor %}
   </div>
 </section>
-
-{% include 'main/footer.html' %}
-
-</body>
-</html>
+{% endblock %}
