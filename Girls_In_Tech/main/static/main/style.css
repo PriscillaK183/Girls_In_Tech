@@ -1,6 +1,4 @@
-/* =========================
-   Global Styles
-   ========================= */
+
 html, body {
   height: 100%;
   margin: 0;
@@ -10,21 +8,16 @@ html, body {
   color: #333;
 }
 
-/* Wrapper for layout */
+
 .wrapper {
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
-
-/* Main content grows to fill space */
 .content {
   flex: 1;
 }
 
-/* =========================
-   Navbar
-   ========================= */
 .navbar {
   background: #ffb6c1;
   display: flex;
